@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+     <!-- Bootstrap CSS -->
+         <!-- build:css css/main.css -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href='css/style.css'>
+     <link rel="stylesheet" href="css/font-awesome.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="tylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+      <!-- endbuild -->
+    <title>Ristorante Con Fusion: About Us</title>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#"> <img src="img/logo.png" alt="bgimage" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item "><a class="nav-link" href="./index.html"><span
+                                class="fa fa-home fa-lg"></span>Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./courseconsideration.html"><span
+                                class="fa fa-info fa-lg"></span>Course Consideration</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span>Menu</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
+                                class="fa fa-home fa-lg"></span>Contact</a></li>
+                </ul>
+
+
+
+                <button data-toggle="modal" class="btn btn-sm" id="mychoicebtn">
+                    <span class="navbar-text">
+                        <span class="fa fa-sign-in"></span> MyChoice
+                    </span>
+                </button>
+
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!--all model related should be place at the top of the page-->
+    <div id="mychoiceModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">MyChoices </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+
+                            <button type="button" id="saveAllChoiceBtn" class="btn btn-success">Save</button>
+                        </div>
+                        <div class="form-row">
+                            <div class="container">
+                                <div class="form-group col-sm-12">
+                                    <h4>Nanyang Technological University</h4>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <div class="center">
+                                        <ul id="ntu-list" class="list-group ntuConnectedSortable">
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="ntu-choice-1" type="text" class="form-control ntuposition"
+                                                        placeholder="Choice 1"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="ntu-choice-2" type="text" class="form-control ntuposition"
+                                                        placeholder="Choice 2"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="ntu-choice-3" type="text" class="form-control ntuposition"
+                                                        placeholder="Choice 3"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="ntu-choice-4" type="text" class="form-control ntuposition"
+                                                        placeholder="Choice 4"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="ntu-choice-5" type="text" class="form-control ntuposition"
+                                                        placeholder="Choice 5"></div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="container">
+                                <div class="form-group col-sm-12">
+                                    <h4>National University of Singapore</h4>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <div class="center">
+                                        <ul id="nus-list" class="list-group nusConnectedSortable">
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="nus-choice-1" type="text" class="form-control nusposition"
+                                                        placeholder="Choice 1"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="nus-choice-2" type="text" class="form-control nusposition"
+                                                        placeholder="Choice 2"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="nus-choice-3" type="text" class="form-control nusposition"
+                                                        placeholder="Choice 3"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="nus-choice-4" type="text" class="form-control nusposition"
+                                                        placeholder="Choice 4"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="nus-choice-5" type="text" class="form-control nusposition"
+                                                        placeholder="Choice 5"></div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="form-row">
+                            <div class="container">
+                                <div class="form-group col-sm-12">
+                                    <h4>Singapore Management University</h4>
+                                </div>
+                                <div class="form-group col-sm-12">
+                                    <div class="center">
+                                        <ul id="smu-list" class="list-group smuConnectedSortable">
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="smu-choice-1" type="text" class="form-control smuposition"
+                                                        placeholder="Choice 1"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="smu-choice-2" type="text" class="form-control smuposition"
+                                                        placeholder="Choice 2"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="smu-choice-3" type="text" class="form-control smuposition"
+                                                        placeholder="Choice 3"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="smu-choice-4" type="text" class="form-control smuposition"
+                                                        placeholder="Choice 4"></div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="input-group"><i class="fa fa-bars handle"></i><input
+                                                        id="smu-choice-5" type="text" class="form-control smuposition"
+                                                        placeholder="Choice 5"></div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- end of row -->
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header class="jumbotron" id="courseheader">
+        <div class="container">
+            <div class="row row-header">
+
+                <div class="col-12 col-sm-8">
+                    <h1>Course Consideration</h1>
+                    <p class="subtitle">This page helps you to find the current IGP and gives you an estimation of how
+                        the current market
+                        is.
+                        Enter in your prefer course in the textbox below</p>
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <!-- <img src="img/logo.png" class="img-fluid"> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <ol class="col-12 breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active"><a>Course Consideration</a></li>
+            </ol>
+        </div>
+
+
+
+
+        <form id="reserveform">
+            <div class="form-group row row-header">
+                <label for="searchTxt" class="col-12 col-md-2 col-form-label">Search Course</label>
+                <div class="col-12 col-md-8 ">
+                    <input type="text" class="form-control shadow-sm p-3 mb-5 bg-white rounded" id="searchTxt"
+                        list="courses" placeholder="Computer Science">
+                    <datalist id="courses"></datalist>
+
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </div>
+
+
+        </form>
+
+        <div class="">
+
+        </div>
+
+        <div class="row row-content card card-body shadow-sm p-3 mb-5 bg-white rounded">
+            <div class="col-12 col-md-12">
+                <div class="card-body">
+                    <h5 class="card-title">IGP data for Computer science</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Data updated as of sept 2020</h6>
+                    <div class="table-responsive">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th><strong>Course Name</strong></th>
+                                    <th class="text-center"><strong>Course Name</strong></th>
+                                    <th class="text-center" colspan="2"><strong>JC Percentile</strong></th>
+                                    <th class="text-center" colspan="2"><strong>Poly Percentile</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="1"><u>NTU</u></td>
+                                    <td></td>
+                                    <td class="text-center"><u>10th</u></td>
+                                    <td class="text-center"><u>90th</u></td>
+                                    <td class="text-center"><u>10th</u></td>
+                                    <td class="text-center"><u>90th</u></td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor in computer science</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">AAB/B</td>
+                                    <td class="text-center">AAA/A</td>
+                                    <td class="text-center">3.69</td>
+                                    <td class="text-center">3.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor in Business and Computer science</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">AAB/B</td>
+                                    <td class="text-center">AAA/A</td>
+                                    <td class="text-center">3.69</td>
+                                    <td class="text-center">3.99</td>
+                                </tr>
+
+                                <tr>
+                                    <td rowspan="1"><u>NUS</u></td>
+                                    <td></td>
+                                    <td class="text-center"><u></u></td>
+                                    <td class="text-center"><u></u></td>
+                                    <td class="text-center"><u></u></td>
+                                    <td class="text-center"><u></u></td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor in computer science</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">AAB/B</td>
+                                    <td class="text-center">AAA/A</td>
+                                    <td class="text-center">3.69</td>
+                                    <td class="text-center">3.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Bachelor in Business and Computer science</td>
+                                    <td class="text-center">4</td>
+                                    <td class="text-center">AAB/B</td>
+                                    <td class="text-center">AAA/A</td>
+                                    <td class="text-center">3.69</td>
+                                    <td class="text-center">3.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row row-header row-content">
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded col-12">
+                <div class="card-body">
+                    <h5 class="card-title">Employment Rates</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Date as of 2018</h6>
+                    <div class=" col-12 align-self-center">
+                        <canvas id="myChart" width="100%" height="30"></canvas>
+                    </div>
+                    <div class="col-12">
+                        <p id="employementTitle" class="text-center"><u>Full time permanent employment rate</u></p>
+
+                        <div class="col-5 offset-3 align-self-center">
+                            <ol>
+                                <li>
+                                    <p>NTU - Bachalor in computer science</p>
+                                    <p>%90</p>
+                                </li>
+                                <li>
+                                    <p>NTU - Bachelor in Business and Computer science</p>
+                                    <p>%90</p>
+                                </li>
+                            </ol>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row row-header row-content">
+            <div class="col-12 col-sm-6">
+                <h2>Our History</h2>
+                <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence
+                    in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it
+                    enjoys patronage from the A-list clientele in Hong Kong. Featuring four of the best three-star
+                    Michelin chefs in the world, you never know what will arrive on your plate the next time you visit
+                    us.</p>
+                <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by
+                    our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <h3 class="card-header bg-primary text-white">Facts At a Glance</h3>
+                    <div class="card-body">
+
+                        <dl class="row">
+                            <dt class="col-6">Started</dt>
+                            <dd class="col-6">3 Feb. 2013</dd>
+                            <dt class="col-6">Major Stake Holder</dt>
+                            <dd class="col-6">HK Fine Foods Inc.</dd>
+                            <dt class="col-6">Last Year's Turnover</dt>
+                            <dd class="col-6">$1,250,375</dd>
+                            <dt class="col-6">Employees</dt>
+                            <dd class="col-6">40</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card card-body bg-light">
+                    <blockquote class="blockquote">
+                        <p class="mb-0">You better cut the pizza in four pieces because
+                            I'm not hungry enough to eat six.</p>
+                        <footer class="blockquote-footer">Yogi Berra,
+                            <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
+                                P. Pepe, Diversion Books, 2014</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-header">
+            <div class="row-content">
+                <h2>Corporate Leadership</h2>
+
+                <ul class="nav nav-tabs d-none d-sm-block">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#peter" role="tab" data-toggle="tab">Peter Pan, CEO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#danny" role="tab" data-toggle="tab">Danny Witherspoon, CFO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#agumbe" role="tab" data-toggle="tab">Agumbe Tang, CTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alberto" role="tab" data-toggle="tab">Alberto Somayya, Exec. Chef</a>
+                    </li>
+                </ul>
+
+                <!--tab and pills-->
+                <div id="tab-content" class="d-none d-sm-block">
+                    <div class="tab-content d-none d-sm-block">
+                        <div role="tabpanel" class="tab-pane fade show active" id="peter">
+                            <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                            <p class="d-none d-sm-block ">Our CEO, Peter, credits his hardworking East Asian immigrant
+                                parents who undertook the arduous journey to the shores of America with the intention of
+                                giving their children the best future. His mother's wizardy in the kitchen whipping up
+                                the
+                                tastiest dishes with whatever is available inexpensively at the supermarket, was his
+                                first
+                                inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well
+                                known. He brings his zeal for fusion cuisines to this restaurant, pioneering
+                                cross-cultural
+                                culinary connections.</p>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="danny">
+                            <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                            <p class="d-none d-sm-block ">Our CFO, Danny, as he is affectionately referred to by his
+                                colleagues, comes from a long established family tradition in farming and produce. His
+                                experiences growing up on a farm in the Australian outback gave him great appreciation
+                                for
+                                varieties of food sources. As he puts it in his own words, <em>Everything that runs,
+                                    wins,
+                                    and everything that stays, pays!</em></p>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="agumbe">
+                            <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                            <p class="d-none d-sm-block ">Blessed with the most discerning gustatory sense, Agumbe, our
+                                CTO,
+                                personally ensures that every dish that we serve meets his exacting tastes. Our chefs
+                                dread
+                                the tongue lashing that ensues if their dish does not meet his exacting standards. He
+                                lives
+                                by his motto, <em>You click only if you survive my lick.</em></p>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="alberto">
+                            <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                            <p class="d-none d-sm-block ">Award winning three-star Michelin chef with wide International
+                                experience having worked closely with whos-who in the culinary world, he specializes in
+                                creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the
+                                    cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Accordion -->
+                <div id="accordion" class="d-md-none">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="peterhead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#peter">
+                                    Peter Pan <small>Chief Epicurious Officer</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role="tabpanel" class="collapse show" id="peter" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class=" ">Our CEO, Peter, credits his hardworking East Asian immigrant
+                                    parents who undertook the arduous journey to the shores of America with the
+                                    intention of
+                                    giving their children the best future. His mother's wizardy in the kitchen whipping
+                                    up the
+                                    tastiest dishes with whatever is available inexpensively at the supermarket, was his
+                                    first
+                                    inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became
+                                    well
+                                    known. He brings his zeal for fusion cuisines to this restaurant, pioneering
+                                    cross-cultural
+                                    culinary connections.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="dannyhead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#danny">
+                                    Dhanasekaran Witherspoon <small>Chief Food Officer</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role="tabpanel" class="collapse " id="danny" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="">Our CFO, Danny, as he is affectionately referred to by his
+                                    colleagues, comes from a long established family tradition in farming and produce.
+                                    His
+                                    experiences growing up on a farm in the Australian outback gave him great
+                                    appreciation for
+                                    varieties of food sources. As he puts it in his own words, <em>Everything that runs,
+                                        wins,
+                                        and everything that stays, pays!</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="agumbehead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#agumbe">
+                                    Agumbe Tang <small>Chief Taste Officer</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role="tabpanel" class="collapse " id="agumbe" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="">Blessed with the most discerning gustatory sense, Agumbe,
+                                    our CTO,
+                                    personally ensures that every dish that we serve meets his exacting tastes. Our
+                                    chefs dread
+                                    the tongue lashing that ensues if their dish does not meet his exacting standards.
+                                    He lives
+                                    by his motto, <em>You click only if you survive my lick.</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" role="tab" id="albertohead">
+                            <h3 class="mb-0">
+                                <a data-toggle="collapse" data-target="#alberto">
+                                    Alberto Somayya <small>Executive Chef</small>
+                                </a>
+                            </h3>
+                        </div>
+                        <div role="tabpanel" class="collapse " id="alberto" data-parent="#accordion">
+                            <div class="card-body">
+                                <p class="">Award winning three-star Michelin chef with wide
+                                    International
+                                    experience having worked closely with whos-who in the culinary world, he specializes
+                                    in
+                                    creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together
+                                        the
+                                        cuisines from the two craziest cultures, and you get a winning hit! Amma
+                                        Mia!</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--end -->
+                    <div class="tab-content d-none d-sm-block">
+                        <div role="tabpanel" class="tab-pane fade show active" id="peter">
+                            <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                            <p class="d-none d-sm-block ">Our CEO, Peter, credits his hardworking East Asian immigrant
+                                parents who undertook the arduous journey to the shores of America with the intention of
+                                giving their children the best future. His mother's wizardy in the kitchen whipping up
+                                the
+                                tastiest dishes with whatever is available inexpensively at the supermarket, was his
+                                first
+                                inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well
+                                known. He brings his zeal for fusion cuisines to this restaurant, pioneering
+                                cross-cultural
+                                culinary connections.</p>
+
+                        </div>
+
+
+
+                        <div role="tabpanel" class="tab-pane fade" id="danny">
+                            <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                            <p class="d-none d-sm-block ">Our CFO, Danny, as he is affectionately referred to by his
+                                colleagues, comes from a long established family tradition in farming and produce. His
+                                experiences growing up on a farm in the Australian outback gave him great appreciation
+                                for
+                                varieties of food sources. As he puts it in his own words, <em>Everything that runs,
+                                    wins,
+                                    and everything that stays, pays!</em></p>
+
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="agumbe">
+                            <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                            <p class="d-none d-sm-block ">Blessed with the most discerning gustatory sense, Agumbe, our
+                                CTO,
+                                personally ensures that every dish that we serve meets his exacting tastes. Our chefs
+                                dread
+                                the tongue lashing that ensues if their dish does not meet his exacting standards. He
+                                lives
+                                by his motto, <em>You click only if you survive my lick.</em></p>
+
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane fade" id="alberto">
+                            <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                            <p class="d-none d-sm-block ">Award winning three-star Michelin chef with wide International
+                                experience having worked closely with whos-who in the culinary world, he specializes in
+                                creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the
+                                    cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em>
+                            </p>
+
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+
+                <div class="row row-content">
+                    <h2>Facts &amp; Figures</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>2013</th>
+                                    <th>2014</th>
+                                    <th>2015</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Employees</th>
+                                    <td>15</td>
+                                    <td>30</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <th>Guests Served</th>
+                                    <td>15000</td>
+                                    <td>45000</td>
+                                    <td>100,000</td>
+                                </tr>
+                                <tr>
+                                    <th>Special Events</th>
+                                    <td>3</td>
+                                    <td>20</td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <th>Annual Turnover</th>
+                                    <td>$251,325</td>
+                                    <td>$1,250,375</td>
+                                    <td>~$3,000,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-3"></div>
+            </div>
+
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 offset-1 col-sm-2">
+                        <h5>Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="./contactus.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-7 col-sm-5">
+                        <h5>Our Address</h5>
+                        <address>
+                            121, Clear Water Bay Road<br>
+                            Clear Water Bay, Kowloon<br>
+                            HONG KONG<br>
+                            <i class="fa fa-phone fa-lg"></i>.: +852 1234 5678<br>
+                            <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
+                            <i class="fa fa-envelope fa-lg"></i>: <a
+                                href="mailto:confusion@food.net">confusion@food.net</a>
+                        </address>
+                    </div>
+                    <div class="col-12 col-sm-4 align-self-center">
+                        <div class="text-center">
+                            <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                    class="fa fa-google-plus fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-facebook"
+                                href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                    class="fa fa-linkedin fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                    class="fa fa-twitter fa-lg"></i></a>
+                            <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i
+                                    class="fa fa-youtube fa-lg"></i></a>
+                            <a class="btn btn-social-icon " href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <p>© Copyright 2018 Ristorante Con Fusion</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+        <!-- build:js js/main.js -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/Chart.min.js"></script>
+        <script src="js/Sortable.js"></script>
+        <script src="js/course.js"></script>
+
+        
+        
+        <!-- endbuild -->
+</body>
+
+</html>
